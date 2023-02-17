@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- Version 8 MySQL hiberante-cfg.xml example for Hibernate 5 -->
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <!-- property name="connection.driver_class">com.mysql.jdbc.Driver</property -->
+    <property name="connection.url">jdbc:mysql://localhost:3306/nados</property>
+    <!-- <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property> -->
+    <property name="connection.username">root</property>
+    <property name="connection.password">Dhanji@12</property>
+    <!-- <property name="connection.pool_size">3</property> -->
+    <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <!-- <property name="current_session_context_class">thread</property> -->
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="hbm2ddl.auto">update</property>
+    <mapping class="com.entities.DetailsFaculty" />
+    <mapping class="com.entities.TimeTable"/>
+     <mapping class="com.entities.register"/>
+    <mapping class="com.entities.Monday"/>
+    <mapping class="com.entities.Tuesday"/>
+    <mapping class="com.entities.Wednesday"/>
+    <mapping class="com.entities.Thursday"/>
+    <mapping class="com.entities.Friday"/>
+    <mapping class="com.entities.Saturday"/>
+    <!-- mapping class="com.mcnz.jpa.examples.Player" / -->
+  </session-factory>
+</hibernate-configuration>
